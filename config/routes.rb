@@ -9,7 +9,9 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
     resources :likes, only: [:create, :destroy]
   end
-  resources :friendships, only: [:create]
+  resources :friendships
+  delete 'remove_friend' => 'friendships#destroy'
+  put 'add_friend' => 'friendships#update'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
