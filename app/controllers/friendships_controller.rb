@@ -17,8 +17,8 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @friendship = Friendship.find(params[:id])
-    @friendship.destroy
+    deny = Friendship.find_by(user_id: friendship_params[:user_id], friend_id: current_user.id, confirmed: nil)
+    deny.destroy
 
     redirect_to users_path
   end

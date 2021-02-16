@@ -20,7 +20,7 @@
       <% u = User.find_by(id: fr.user_id) %>
       <%= u.name %>
       <%= link_to('Accept Request', add_friend_path(user_id: u.id), method: :put) %>
-      <%= link_to('Reject Request', remove_friend_path(friend_id: @user.id), method: :delete) %>
+      <%= link_to('Reject Request', remove_friend_path(user_id: u.id), method: :delete) %>
       <br>
     <% end %>
   <% end %>
