@@ -6,9 +6,9 @@ class FriendshipsController < ApplicationController
   end
 
   def update
-    accept = Friendship.find_by(user_id: friendship_params[:user_id], friend_id: current_user.id, confirmed: nil)
-    accept.confirmed = true
-    if accept.save
+    accepted_request = Friendship.find_by(user_id: friendship_params[:user_id], friend_id: current_user.id, confirmed: nil)
+    accepted_request.confirmed = true
+    if accepted_request.save
       Friendship.create(user_id: current_user.id, friend_id: friendship_params[:user_id], confirmed: true)
       redirect_to users_path
     else
@@ -17,8 +17,8 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    deny = Friendship.find_by(user_id: friendship_params[:user_id], friend_id: current_user.id, confirmed: nil)
-    deny.destroy
+    denied_request = Friendship.find_by(user_id: friendship_params[:user_id], friend_id: current_user.id, confirmed: nil)
+    denied_request.destroy
 
     redirect_to users_path
   end
