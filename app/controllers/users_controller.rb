@@ -8,9 +8,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @posts = @user.posts.ordered_by_most_recent
-    @friendship_request = Friendship.find_by(friend_id: @user.id, confirmed: nil)
-    if @friendship_request != nil 
-      @friendship_requester = User.find_by(id: @friendship_request.user_id)
-    end
+    @friendship_request = Friendship.where(friend_id: @user.id, confirmed: nil)
   end
 end

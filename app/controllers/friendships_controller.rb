@@ -6,20 +6,26 @@ class FriendshipsController < ApplicationController
   end
 
   def update
-    accept = Friendship.find_by(friend_id: current_user.id, confirmed: nil)
+    accept = Friendship.find_by(user_id: friendship_params[:user_id], friend_id: current_user.id, confirmed: nil)
     accept.confirmed = true
     if accept.save
-      Friendship.update(confirmed: true)
+      Friendship.create(user_id: current_user.id, friend_id: friendship_params[:user_id], confirmed: true)
       redirect_to users_path
     else
       redirect_to users_path, alert: 'Something went wrong with the invite!'
     end
   end
 
+  def destroy
+    @friendship = Friendship.find(params[:id])
+    @friendship.destroy
+
+    redirect_to users_path
+  end
 
   private
 
   def friendship_params
-    params.require(:friendship).permit(:friend_id)
+    params.permit(:user_id)
   end
 end
