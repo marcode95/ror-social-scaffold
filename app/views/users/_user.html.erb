@@ -1,6 +1,12 @@
 <li>
-  Name: <%= user.name %>
-  <span class="profile-link">
-    <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
-  </span>
+    Name: <%= user.name %>
+    <span class="profile-link">
+      <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
+    </span>
+  <% if !Friendship.find_by(user_id: current_user.id, friend_id: user.id) and !Friendship.find_by(user_id: user.id, friend_id: current_user.id) and current_user != user %>
+      <%= form_with(:url => friendships_path) do |f| %>
+        <%= f.hidden_field :user_id, value: user.id %>
+        <%= f.submit 'Invite to Friendship' %>
+      <% end %>
+  <% end %>
 </li>
