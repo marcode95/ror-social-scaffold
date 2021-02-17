@@ -9,4 +9,8 @@
         <%= f.submit 'Invite' %>
       <% end %>
   <% end %>
+  <% if Friendship.find_by(user_id: user.id, friend_id: current_user.id, confirmed: nil) %>
+    <br>
+    <p> Friendship requested! Check your profile to react! </p>
+  <% end %>
 </li>
