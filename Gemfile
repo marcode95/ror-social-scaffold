@@ -17,6 +17,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 # hirb
 gem 'hirb', '~> 0.7.3'
+# capybara
+gem 'capybara'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -44,6 +46,8 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # rspec
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.2'
 end
 
 group :test do
