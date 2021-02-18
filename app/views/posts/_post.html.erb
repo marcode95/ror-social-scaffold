@@ -1,5 +1,5 @@
 <li class="post">
-  <% if Friendship.find_by(user_id: current_user, friend_id: post.user, confirmed: true) %>
+  <% if find_friendship(@friendship, current_user, post.user, true) or current_user == post.user %>
     <div>
       <div class='post-attribution' >
         <%= link_to post.user.name, user_path(post.user), class: 'post-author' %>
@@ -23,3 +23,4 @@
     </div>
   <% end %>
 </li>
+  <% #if Friendship.find_by(user_id: current_user, friend_id: post.user, confirmed: true) or current_user == post.user %>
