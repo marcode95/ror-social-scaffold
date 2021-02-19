@@ -1,6 +1,6 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
-  <%= render partial: 'invite' %>
+  <%= invite_check %>
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
@@ -8,5 +8,5 @@
     </ul>
   </article>
   <br>
-  <%= render partial: 'pending' %>
+  <%= pending_check %>
 </section>

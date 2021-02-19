@@ -20,6 +20,7 @@ gem 'hirb', '~> 0.7.3'
 # capybara
 gem 'capybara'
 
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -62,6 +63,8 @@ group :development do
   gem 'rubocop'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # better errors
+  gem 'better_errors', '~> 2.1', '>= 2.1.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
