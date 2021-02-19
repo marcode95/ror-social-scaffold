@@ -17,8 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 # hirb
 gem 'hirb', '~> 0.7.3'
-# capybara
-gem 'capybara'
+
 
 
 # Use CoffeeScript for .coffee assets and views
@@ -53,6 +52,8 @@ end
 
 group :test do
   gem 'rspec'
+  gem 'shoulda-matchers', '~> 4.0'
+  gem 'capybara'
 end
 
 group :development do

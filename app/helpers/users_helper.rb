@@ -11,13 +11,23 @@ module UsersHelper
     end 
   end
 
-  def find_friendship(friendship, user_id, friend_id)
+  def check_friendship(friendship, user_id, friend_id)
     friendship.find_by(user_id: user_id, friend_id: friend_id)
   end
 
   def check_if_friends_yet(blabla)
     if !find_friendship(@friendship, current_user.id, blabla.id) and !find_friendship(@friendship, blabla.id, current_user.id) and current_user != blabla
       render @users
+    end
+  end
+
+  def check_pending_friendship(friendship, user_id, friend_id)
+    friendship.find_by(user_id: user_id, friend_id: friend_id, confirmed: nil)
+  end
+
+  def pending_friendship_render(user)
+    if check_pending_friendship(@friendship, user.id, current_user.id)
+      render partial: 'request'
     end
   end
 end
