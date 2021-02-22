@@ -8,5 +8,11 @@
     </ul>
   </article>
   <br>
+  <% if !check_friendship(@friendship, current_user.id, @user.id) and !check_friendship(@friendship, @user.id, current_user.id) and current_user != @user %>
+    <%= form_with(:url => friendships_path) do |f| %>
+      <%= f.hidden_field :user_id, value: @user.id %>
+      <%= f.submit "Invite #{@user.name}" %>
+  <% end %>
+  <% end %>
   <%= pending_check %>
 </section>
