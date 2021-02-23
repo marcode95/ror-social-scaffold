@@ -1,0 +1,9 @@
+ <h3>Pending Requests From:</h3>
+<% @friendship_request.each do |fr| %>
+  <% u = User.find_by(id: fr.user_id) %>
+  <%= u.name %>
+  <%= link_to('Accept Request', accept_request_path(user_id: u.id), method: :put) %>
+  <%= link_to('Reject Request', deny_request_path(user_id: u.id), method: :delete) %>
+  <br>
+<% end %>
+
