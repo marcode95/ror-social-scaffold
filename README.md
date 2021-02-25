@@ -1,6 +1,6 @@
-# Scaffold for social media app with Ruby on Rails
+# Social Media App
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+This rails app focuses on implementing a Friendship feature among users. Users are able to send friend requests and accept or reject them.
 
 ## Built With
 
@@ -14,70 +14,31 @@ TBA
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+**To get this project set up on your local machine, follow these simple steps:**
 
-### Prerequisites
-
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
-
-### Setup
-
-Instal gems with:
-
-```
-bundle install
-```
-
-Setup database with:
-
-```
-   rails db:create
-   rails db:migrate
-```
-
-### Github Actions
-
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
-
-
-### Usage
-
-Start server with:
-
-```
-    rails server
-```
-
-Open `http://localhost:3000/` in your browser.
-
-### Run tests
-
-```
-    rpsec --format documentation
-```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
-
-TBA
+**Step 1**<br>
+Navigate through the local folder where you want to clone the repository and run
+`git clone https://github.com/marcode95/ror-social-scaffold`.<br>
+**Step 2**<br>
+Run `cd ror-social-scaffold`.<br>
+**Step 3**<br>
+Run `bundle install` to install the gems from the `Gemfile`.<br>
+**Step 4**<br>
+Run `yarn install` to install the packages from the `package.json` file.<br>
+**Step 5**<br>
+Run `rake db:create` to create you local database.<br>
+**Step 6**<br>
+Run `rake db:migrate` to create you local database.<br>
+**Step 7**<br>
+Run `rails server` to start the rails server.<br>
+**Step 8**<br>
+You can navigate to `http://localhost:3000/` to see your application running<br>
 
 ## Authors
 
-TBA
+👤 **Marco Erhardt**
 
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
+- Github: [@marcode95](https://github.com/marcode95)
 
 ## Show your support
 
@@ -85,9 +46,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+- Microverse for showing the way for this project to happen
 
 ## 📝 License
 
-TBA
-
+This project is [MIT](lic.url) licensed.
