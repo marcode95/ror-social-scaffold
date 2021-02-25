@@ -9,8 +9,7 @@ This rails app focuses on implementing a Friendship feature among users. Users a
 
 ## Live Demo
 
-TBA
-
+https://floating-garden-14890.herokuapp.com/users/sign_in
 
 ## Getting Started
 
