@@ -13,7 +13,7 @@ https://floating-garden-14890.herokuapp.com
 
 ## Getting Started
 
-**To get this project set up on your local machine, follow these simple steps:**
+**To get this project set up on your local machine follow these simple steps:**
 
 **Step 1**<br>
 Navigate through the local folder where you want to clone the repository and run
