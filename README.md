@@ -11,7 +11,6 @@ This rails app focuses on implementing a Friendship feature among users. Users a
 
 https://floating-garden-14890.herokuapp.com
 
-
 ## Getting Started
 
 **To get this project set up on your local machine follow these simple steps:**
